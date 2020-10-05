@@ -1,0 +1,59 @@
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h3 {
+    color: #555555;
+
+}
+.ultimoslancamentos {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    color: #FFFF;
+    width: 60%;
+    height: 350px;
+    margin-top: 100px;
+    
+
+}
+.ultimoslancamentos-cards {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.categorias {
+    width: 60%;
+    height: 400px;
+    background-color: #2e2d2d;
+    margin-top: 100px;
+    display: flex;
+}
+
+.circulo {  
+    width:200px;
+    height:200px;
+    border-radius: 100%;
+    background-color: #c4c4c4;
+    
+}
+.cardCategoria {
+    width: 33.333% ;
+    height: 100% ;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.buttonClass{
+    width: 150px ;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #F58F00;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
