@@ -1,4 +1,8 @@
 main {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    right: 0px;
     display: flex;
     align-items: center;
     flex-direction: column;
