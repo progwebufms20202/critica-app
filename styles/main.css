@@ -1,17 +1,22 @@
-@font-face {
-  font-family: "Circular Std";
-  src: url("https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Book.woff2")
-      format("woff2"),
-    url("https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Book.woff")
-      format("woff");
+:root {
+  --primaryColor: #f58f00;
 }
 
 @font-face {
-  font-family: "Circular Std Bold";
-  src: url("https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Bold.woff2")
-      format("woff2"),
-    url("https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Bold.woff")
-      format("woff");
+  font-family: 'Circular Std';
+  src: url('https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Book.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Book.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url('https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Bold.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Bold.woff')
+      format('woff');
+  font-weight: bold;
 }
 
 * {
@@ -61,6 +66,25 @@ h1 {
     font-size: 14px;
     line-height: 21px;
   }
+}
+
+.btn-primary {
+  background: var(--primaryColor);
+  border: 0;
+  height: 44px;
+  padding: 0 24px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary:focus {
+  outline: 0;
+}
+
+.btn-primary:hover {
+  background: rgba(245, 143, 0, 0.9);
 }
 
 #page-details header {
@@ -124,6 +148,10 @@ h1 {
   margin: 0 0 24px;
 }
 
+#page-details header.review-section button {
+  margin: 16px 0 0;
+}
+
 ul.reviews {
   list-style: none;
 }
@@ -132,4 +160,29 @@ ul.reviews li {
   background: #2e2d2d;
   border-radius: 4px;
   padding: 16px;
+  margin: 0 0 24px;
+}
+
+ul.reviews li .review-header {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+ul.reviews li .review-info {
+  display: flex;
+  color: #b8b6b4;
+  white-space: nowrap;
+}
+
+ul.reviews li p {
+  color: #e4e5e6;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@media (max-width: 1024px) {
+  ul.reviews li .review-info {
+    margin: 0 0 16px;
+  }
 }
