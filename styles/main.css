@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Circular Std";
+  src: url("https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Book.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Book.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Circular Std Bold";
+  src: url("https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Bold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/@css-pkg/circular-std@2.0.0/fonts/CircularStd-Bold.woff")
+      format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a1918;
+  height: 100%;
+  color: #fff;
+  font-family: Circular Std;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 48px 0 0;
+}
+
+.content {
+  max-width: 1216px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  flex: 1;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 61px;
+  font-weight: 400;
+}
+
+.body-m {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .body-m {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+#page-details header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 64px;
+  width: 100%;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+#page-details header .piece-info {
+  display: flex;
+  align-items: center;
+  margin: 8px 0 24px;
+  color: #b8b6b4;
+}
+
+.separator {
+  height: 20px;
+  margin: 0 8px;
+  width: 1px;
+  background: #b8b6b4;
+}
+
+.plot {
+  display: flex;
+  flex-direction: column;
+}
+
+.plot p {
+  margin: 8px 16px 0 0;
+  max-width: 590px;
+  color: #b8b6b4;
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  #page-details header {
+    flex-direction: column;
+    margin: 0 0 32px;
+  }
+
+  #page-details header .piece-info {
+    display: flex;
+    align-items: center;
+    color: #b8b6b4;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  #page-details header img {
+    margin: 24px 0 0;
+  }
+}
+
+#page-details header.review-section {
+  margin: 0 0 24px;
+}
+
+ul.reviews {
+  list-style: none;
+}
+
+ul.reviews li {
+  background: #2e2d2d;
+  border-radius: 4px;
+  padding: 16px;
+}
