@@ -107,7 +107,7 @@ h1 {
 }
 
 .separator {
-  height: 20px;
+  height: 18px;
   margin: 0 8px;
   width: 1px;
   background: #b8b6b4;
@@ -142,15 +142,17 @@ h1 {
   #page-details header img {
     margin: 24px 0 0;
   }
+
+  #page-details header.review-section button {
+    margin: 16px 0 0;
+  }
+  
 }
 
 #page-details header.review-section {
   margin: 0 0 24px;
 }
 
-#page-details header.review-section button {
-  margin: 16px 0 0;
-}
 
 ul.reviews {
   list-style: none;
@@ -172,6 +174,7 @@ ul.reviews li .review-info {
   display: flex;
   color: #b8b6b4;
   white-space: nowrap;
+  margin: 4px 0 16px;
 }
 
 ul.reviews li p {
