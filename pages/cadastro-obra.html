@@ -47,50 +47,62 @@
           </div>
       </nav>
     <main class="container">
-        <section id="page-home" class="content">
-             
+        <section id="page-cadastro-obra" class="content">
+
+            
+        <form class="form-obra">             
                 <section class="escolhaimagem">
-                    <section class="escolhatexto">
-                         <a class="clicar">Escolha a Imagem</a>
-                    </section>
+                    <!-- <section class="escolhatexto">                          -->
+                         <input id="imagemObra" type="file" onchange="upload()" name="arquivos" class="escolhatexto"  accept="image/png, image/jpeg"  multiple />
+                         <img id="img"/>
+                    <!-- </section> -->
                 </section>
                                 
                 <div class="insert">
-                    <input type="text" placeholder="Nome" />           
+                    <input type="text" id="titulo" type="text" placeholder="Título" />   
+                            
                 </div>
                                             
                 <div class="insert">
-                    <input type="text" placeholder="Tipo" />           
+                    <select  id="categoria">                        
+                        <option class=".option" value="Filme" selected>Filme</option>
+                        <option class=".option" value="Serie">Série</option>
+                        <option class=".option" value="Livro">Livro</option>
+                        
+                      </select>        
                 </div>
                                             
                 <div class="insert">
-                    <input type="text" placeholder="Duração" />           
+                    <input id="duracao" type="text" placeholder="Duração" />           
                 </div>
                                             
                 <div class="insert">
-                    <input type="text" placeholder="Gênero" />           
+                    <input id="genero" type="text" placeholder="Gênero" />           
                 </div>
                 
                 <div class="insert">
-                    <input type="text" placeholder="Data de Lançamento" />
+                    <input id="dataLancamento" type="text" placeholder="Data de Lançamento" />
                 </div>
                                             
                 <div class="insert">
-                    <input type="text" placeholder="Classificação Indicativa" />           
-                </div>
-                    
-                <div class="insert2">
-                    <input type="text" placeholder="Enredo" />           
+                    <input id="classificacãoIndicativa" type="text" placeholder="Classificação Indicativa" />           
                 </div>
                 
-                <button type="button" class="botaocadastrar">Cadastrar</button>
+                <div class="insert">
+                    <textarea id="enredo" placeholder="Enredo" ></textarea>           
+                </div>                                             
+                <input type="submit" class="botaocadastrar" onclick="Cadastrar();" value="Cadastrar" />
+            </form>
                 
         </section>
     </main>
 
 
 
+
+
     <script type ="text/javascript" src="../scripts/header.js"> </script>
+    <script type ="text/javascript" src="../scripts/cadastro-obra.js"> </script>
 </body>
 
 </html>

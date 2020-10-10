@@ -6,7 +6,7 @@
 }
 
 .escolhaimagem {
-    width: 40%;
+    width: 100%;
     height: 300px;
     background-color: #454443;
     margin-top: 30px;
@@ -34,8 +34,22 @@
 }
 
 .insert {
-    width: 40%;   
+    width: 100%;   
     margin-top: 10px;
+}
+.insert select {
+    color: white;
+    padding-left: 10px;
+    height:40px;
+    width: 100%;
+    background-color: #2e2d2d;
+    border-radius: 4px;
+    border-style: none;
+    outline:none;
+
+}
+.option{
+    background-color: #2e2d2d; 
 }
 
 .insert input {
@@ -49,10 +63,18 @@
     outline:none;
 }
 
-.insert2 {
-    width: 40%;   
-    margin-top: 10px;
-    margin-bottom: 10px;
+.insert textarea 
+{   padding: 10px;
+    color: white;
+    padding-left: 10px;
+    height:160px;
+    width: 100%;
+    background-color: #2e2d2d;
+    border-radius: 4px;
+    border-style: none;
+    outline:none;
+    width: 100%;      
+    margin-bottom: 10px;    
 }
 .insert2 input {
     color: white;
@@ -66,7 +88,7 @@
 }
 
 .botaocadastrar{
-    width: 40%;
+    width: 100%;
     height: 40px;
     border-radius: 5px;
     background-color: #F58F00;
@@ -78,4 +100,19 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+}
+
+#page-cadastro-obra {
+    display: flex;
+  align-items:  center;
+}
+/* 
+form {
+    display: flex;
+    align-items: center;
+} */
+
+.form-obra {
+    width: 40%;
+
 }

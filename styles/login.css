@@ -1,9 +1,12 @@
 .corpo {
-    position: absolute;
-    width: 384px;
-    height: center;
-    left: 35%;
-    top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.corpo form {
+     margin-top: 40px;
 }
 
 .corpo h2 {
@@ -22,11 +25,12 @@
 
 .corpo input {
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
     box-sizing: content-box;
     border: 2px solid #2E2D2D;
-    border-radius: 5px;
-    width: 75%;
+    color: white;
+    border-radius: 2px;
+    width: 100%;
     height: 40px;
     padding: 1px 5px;
     font-size: 16pt;
@@ -47,4 +51,15 @@
 .corpo input[type="submit"] {
     background-color: #F58F00;
     border: 2px solid #F58F00;
+}
+
+.auth-a {
+padding: 5px;
+text-decoration:underline;
+color: #9E9D9B;
+cursor: pointer;
+}
+
+.submit {
+    cursor: pointer;
 }

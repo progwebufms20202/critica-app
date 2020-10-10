@@ -222,3 +222,7 @@ ul.reviews li p {
 }
 
 
+.space-around {
+    
+  justify-content: space-between;
+}
