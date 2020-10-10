@@ -14,28 +14,42 @@
 <body>
     <link rel="stylesheet" href="/css/header.css">
 </head>
-<header class="headerNav">  
-    <div class="header">
-        <div class="menu"> 
-            <img  class ="logoNav" src="../images/logo_free-file.png">
-        <button class="buttonNav cinza-claro" onClick="menubar();"><img id="hamburger" src="../images/hamburger-menu-solid-512.png"></img> </button>  
-        </div>
-        <div class="search">
-            <input type="text" placeholder="Search" />           
-        
-        </div>
-        <div class="flex"> 
-            <a class=" auth cinza-claro">Registre-se </a>     
-            <div class="separator"></div>
-            <a class=" auth cinza-claro">Login </a>
-        
-        </div>    
+<script type ="text/javascript" src="../scripts/header.js"> </script>
 
-    </div>
-    
+
+<header class="headerNav">  
+  <div class="header">
+      <div class="menu"> 
+        <a href="home.html" class=" auth cinza-claro"><img  class ="logoNav" src="../images/logo_free-file.png"> </a>
+        <button class="buttonNav cinza-claro" onClick="menubar();">
+          <img id="hamburger" src="../images/hamburger-menu-solid-512.png" />              
+        </button>  
+      </div>
+
+      <div class="search">
+        <input type="text" placeholder="Search" />                       
+      </div>
+
+      <div class="flex"> 
+          <a href="register.html" class=" auth cinza-claro">Registre-se </a>     
+          <div class="separator"></div>
+          <a href="login.html" class=" auth cinza-claro">Login </a>          
+      </div>    
+
+  </div>
+  
 
 </header>
-<nav id="nav"></nav>
+<nav id="nav">
+    <div id ="nav-container">
+        <a href="cadastro-Obra.html"><button title="cadastro de filmes séries ou livros"  class="buttonClass btnCinza">Cadastrar Obra</button></a>
+        <a href="movie.html"><button class="buttonClass btnCinza ">Filmes</button></a>
+        <a href="movie.html"><button class="buttonClass btnCinza" >Livros</button></a>
+        <a href="movie.html"><button class="buttonClass btnCinza">Séries</button></a>
+        
+    </div>
+</nav>
+
     <main class="container">
         <section id="page-home" class="content">
             
@@ -44,19 +58,19 @@
                         <div class="circulo">
                             <img src="../images/2916383.svg"></img>
                         </div>
-                        <a href="movie.html"><button class="buttonClass">Filmes</button></a>
+                        <a href="movie.html"><button class="buttonClass btnAmarelo">Filmes</button></a>
                     </div>
                     <div class="cardCategoria">
                         <div class="circulo">
                             <img src="../images/2232688.svg"></img>
                         </div>
-                        <button class="buttonClass">Livros</button>
+                        <button class="buttonClass btnAmarelo">Livros</button>
                     </div>
                     <div class="cardCategoria">
                         <div class="circulo">
                             <img src="../images/2586771.png"></img>
                         </div>
-                        <button type="button" class="buttonClass">Séries</button>
+                        <button type="button" class="buttonClass btnAmarelo">Séries</button>
                     </div>
                 </section>
                 <section class="ultimoslancamentos">

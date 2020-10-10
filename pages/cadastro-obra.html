@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/header.css" />
+    
+    <title>Cadastro de obra</title>
 
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/cadastro-obra.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
 </head>
 
-<body> 
+<body>
+   
     <header class="headerNav">  
         <div class="header">
             <div class="menu"> 
@@ -45,24 +47,49 @@
           </div>
       </nav>
     <main class="container">
-        <section class="content">
-
-            <div class="corpo">
-                <form action="">
-                    <img src="img/logo.png" alt="">
-                    <input type="text" name="" placeholder="E-mail" id="">
-                    <input type="password" name="" placeholder="Senha" id="">
-                    <input type="submit" value="Entrar na conta">
-
-
-
-                </form>
-            </div>
-
-
-
+        <section id="page-home" class="content">
+             
+                <section class="escolhaimagem">
+                    <section class="escolhatexto">
+                         <a class="clicar">Escolha a Imagem</a>
+                    </section>
+                </section>
+                                
+                <div class="insert">
+                    <input type="text" placeholder="Nome" />           
+                </div>
+                                            
+                <div class="insert">
+                    <input type="text" placeholder="Tipo" />           
+                </div>
+                                            
+                <div class="insert">
+                    <input type="text" placeholder="Duração" />           
+                </div>
+                                            
+                <div class="insert">
+                    <input type="text" placeholder="Gênero" />           
+                </div>
+                
+                <div class="insert">
+                    <input type="text" placeholder="Data de Lançamento" />
+                </div>
+                                            
+                <div class="insert">
+                    <input type="text" placeholder="Classificação Indicativa" />           
+                </div>
+                    
+                <div class="insert2">
+                    <input type="text" placeholder="Enredo" />           
+                </div>
+                
+                <button type="button" class="botaocadastrar">Cadastrar</button>
+                
         </section>
     </main>
+
+
+
     <script type ="text/javascript" src="../scripts/header.js"> </script>
 </body>
 

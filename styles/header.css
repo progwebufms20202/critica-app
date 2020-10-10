@@ -98,6 +98,15 @@ nav {
     padding: 20px;
     display: none;
 }
+nav button {   
+    margin: 10px;
+    color: #454443;
+}
+
+#nav-container {
+    display: flex;
+    
+}
 
 .auth {
     

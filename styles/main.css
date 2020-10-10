@@ -24,6 +24,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
+
+
 
 body {
   background: #1a1918;
@@ -189,3 +194,31 @@ ul.reviews li p {
     margin: 0 0 16px;
   }
 }
+
+.flex {
+  display: flex;
+}
+
+.btnAmarelo {
+  background-color: #F58F00;
+  color: white;
+}
+
+.btnCinza {
+  background-color: #454443;
+  color: white;
+}
+
+.buttonClass{
+  width: 150px ;
+  height: 40px;
+  border-radius: 5px;   
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

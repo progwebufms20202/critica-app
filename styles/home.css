@@ -1,16 +1,4 @@
-/* main {
-    position: absolute;
-    top: 60px;
-    left: 0px;
-    right: 0px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-} */
 
-.flex {
-    display: flex;
-}
 #page-home {
     align-items: center;
 }
@@ -33,7 +21,7 @@
     width: 70%;
     height: 400px;
     background-color: #2e2d2d;
-    margin-top: 100px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     border-radius: 5px;
@@ -66,19 +54,4 @@
     flex-direction: column;
     
 }
-.buttonClass{
-    width: 150px ;
-    height: 40px;
-    border-radius: 5px;
-    background-color: #F58F00;
-    color: white;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-a {
-    text-decoration: none;
-}
+
