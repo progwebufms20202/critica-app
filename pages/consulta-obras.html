@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta</title>
+    <link rel="stylesheet" href="../styles/card.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/consulta-obras.css" />
+    
+  </head>
+  <body onload="carregarCards()">
+
+
+
+    <header class="headerNav">  
+        <div class="header">
+            <div class="menu"> 
+              <a href="home.html" class=" auth cinza-claro"><img  class ="logoNav" src="../images/logo_free-file.png"> </a>
+              <button class="buttonNav cinza-claro" onClick="menubar();">
+                <img id="hamburger" src="../images/hamburger-menu-solid-512.png" />              
+              </button>  
+            </div>
+      
+            <div class="search">
+              <input type="text" placeholder="Search" />                       
+            </div>
+      
+            <div class="flex"> 
+                <a href="register.html" class=" auth cinza-claro">Registre-se </a>     
+                <div class="separator"></div>
+                <a href="login.html" class=" auth cinza-claro">Login </a>          
+            </div>    
+      
+        </div>
+        
+      
+      </header>
+      <nav id="nav">
+        <div id ="nav-container">
+            <a href="cadastro-Obra.html"><button title="cadastro de filmes séries ou livros"  class="buttonClass btnCinza">Cadastrar Obra</button></a>
+            <a href="consulta-obras.html"><button class="buttonClass btnCinza ">Filmes</button></a>
+            <a href="consulta-obras.html"><button class="buttonClass btnCinza" >Livros</button></a>
+            <a href="consulta-obras.html"><button class="buttonClass btnCinza">Séries</button></a>
+            
+        </div>
+      </nav>
+
+
+
+    <main class="container">
+      <section onload="carregarCards()" id="page-consulta-obras" class="content">
+
+
+       
+      </section>
+    </main>
+    <script type ="text/javascript" src="../scripts/consulta-obras.js"> </script>
+    <script type ="text/javascript" src="../scripts/header.js"> </script>
+  </body>
+</html>

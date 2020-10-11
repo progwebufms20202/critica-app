@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/home.css" />
     <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/card.css" />
+    <link rel="stylesheet" href="../styles/consulta-obras.css" />
 </head>
    
 </head>
 
-<body>
+<body onload="carregarCardsHome()">
 
 
 <header class="headerNav">  
@@ -43,9 +45,9 @@
 <nav id="nav">
     <div id ="nav-container">
         <a href="cadastro-Obra.html"><button title="cadastro de filmes séries ou livros"  class="buttonClass btnCinza">Cadastrar Obra</button></a>
-        <a href="movie.html"><button class="buttonClass btnCinza ">Filmes</button></a>
-        <a href="movie.html"><button class="buttonClass btnCinza" >Livros</button></a>
-        <a href="movie.html"><button class="buttonClass btnCinza">Séries</button></a>
+        <a href="consulta-obras.html"><button class="buttonClass btnCinza ">Filmes</button></a>
+        <a href="consulta-obras.html"><button class="buttonClass btnCinza" >Livros</button></a>
+        <a href="consulta-obras.html"><button class="buttonClass btnCinza">Séries</button></a>
         
     </div>
 </nav>
@@ -75,7 +77,8 @@
                 </section>
                 <section class="ultimoslancamentos">
                     <h2>Ultimos Lançamentos</h2>
-       
+                    <div class="ultimoslancamentos-cards" id="consulta-obras" >
+                    </div>
                    
            
         </section>
@@ -88,6 +91,7 @@
 
     </section>
     </main>
+    <script type ="text/javascript" src="../scripts/consulta-obras.js"> </script>
     <script type ="text/javascript" src="../scripts/header.js"> </script>
 </body>
 
