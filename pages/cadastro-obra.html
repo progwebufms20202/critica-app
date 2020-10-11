@@ -52,10 +52,15 @@
             
         <form class="form-obra">             
                 <section class="escolhaimagem">
-                    <!-- <section class="escolhatexto">                          -->
-                         <input id="imagemObra" type="file" onchange="upload()" name="arquivos" class="escolhatexto"  accept="image/png, image/jpeg"  multiple />
-                         <img id="img"/>
-                    <!-- </section> -->
+                    <div class="center">
+                        <div class="form-input">
+                          <label for="file-ip-1">Escolha a imagem</label>
+                          <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+                          <div class="preview">
+                            <img id="file-ip-1-preview">
+                          </div>
+                        </div>
+                      </div>
                 </section>
                                 
                 <div class="insert">
