@@ -31,8 +31,6 @@ function carregarCardsHome() {
   var container = document.getElementById("consulta-obras");
 
   for (var i = 0; i < 3; i++) {
-    console.log("5r");
-    console.log(lista[i]);
     var card = document.createElement("div");
     card.classList.add("card");
 

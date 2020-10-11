@@ -582,3 +582,52 @@ ul.reviews li p {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+
+#perfil-nav img {
+  width: 35px;
+  height: 35px;
+  /* position: relative; */display: flex;
+  justify-content: center;
+}
+
+
+#perfil-nav ul{
+ 
+  position: absolute;
+  top:60px;
+  background-color: #2b2a29;
+  right: 0;
+  
+
+}
+#perfil-nav li{
+  padding: 10px;
+  box-shadow: #9e9d9b;
+  display: flex;
+  justify-content: center;
+
+}
+
+#perfil-nav a{
+  text-decoration: underline;
+  color: #9e9d9b;
+  display: flex;
+  justify-content: center;
+
+}
+#perfil-nav ul{
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 3px;
+  list-style-type: none;
+}
+
+
+#perfil-nav img:hover{
+  opacity: 50%;
+
+
+}

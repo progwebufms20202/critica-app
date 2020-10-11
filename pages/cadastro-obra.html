@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../styles/main.css" />
   </head>
 
-  <body>
+  <body onload="isLoged()" >
     <header class="headerNav">
       <div class="header">
         <div class="menu">
@@ -25,11 +25,20 @@
           <input type="text" placeholder="Search" />
         </div>
 
-        <div class="flex">
+        <div id="auth-nav" class="flex">
           <a href="register.html" class="header-actions">Registre-se </a>
           <div class="separator"></div>
           <a href="login.html" class="header-actions">Login </a>
         </div>
+        
+        <div id="perfil-nav" class="flex">
+          
+          <img  onclick="dropdownPerfil()" src="../images/unnamed.png" alt="">
+          <ul>           
+            <li id="nome-nav"></li>
+            <li><button onclick="sair()">sair -></button></li>
+          </ul>
+            </div>
       </div>
     </header>
     <nav id="nav">
