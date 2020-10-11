@@ -9,25 +9,30 @@
 
   <body>
     <main class="container">
-      <section class="content">
-        <div class="corpo">
-          <a href="home.html">
-            <img src="../images/logo-amarela.png" alt="" />
-          </a>
-          <form action="">
-            <input type="text" name="" placeholder="Nome" id="" />
-            <input type="text" name="" placeholder="E-mail" id="" />
-            <input type="password" name="" placeholder="Senha" id="" />
-            <input
-              type="password"
-              name=""
-              placeholder="Confirmar Senha"
-              id=""
-            />
-            <input class="subimt" type="submit" value="Criar conta" />
-          </form>
-          <a href="login.html" class="auth-a">Já possuo Conta</a>
-        </div>
+      <section id="register-page" class="content auth">
+        <a href="home.html">
+          <img class="logo" src="../images/logo-amarela.png" alt="" />
+        </a>
+        <form action="">
+          <input class="regular-input" name="" placeholder="Nome" id="" />
+          <input class="regular-input" name="" placeholder="E-mail" id="" />
+          <input
+            class="regular-input"
+            type="password"
+            name=""
+            placeholder="Senha"
+            id=""
+          />
+          <input
+            class="regular-input"
+            type="password"
+            name=""
+            placeholder="Confirmar Senha"
+            id=""
+          />
+          <button class="btn-primary" class="submit">Criar conta</button>
+        </form>
+        <a href="login.html" class="auth-a">Já possuo Conta</a>
       </section>
     </main>
     <script type="text/javascript" src="../scripts/header.js"></script>
