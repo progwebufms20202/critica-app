@@ -25,9 +25,15 @@ function carregarCards() {
         cardContainer.appendChild(cardTitulo);
 
 
+        var a = document.createElement('a');
+        a.classList.add('cardLink');
+        a.href="movie.html";
+
+        a.appendChild(card);
+
 
 ;
-        container.appendChild(card);
+        container.appendChild(a);
 
     }
 
