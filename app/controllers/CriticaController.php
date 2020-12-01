@@ -28,8 +28,7 @@ class CriticaController extends Controller
                     $_SESSION['user']->nome,
                     $_SESSION['user']->email,
                     (new DateTime())->format('d/m/Y'),
-                    $_POST['obraID'],
-                    
+                    $_POST['obraID'],                    
                 );
                 try {
                 
@@ -37,9 +36,9 @@ class CriticaController extends Controller
                     $critica->salvar();
 
 
-                    header('Location: index.php?Obra/detalhe=' . $_POST['obraID']);
+                    header('Location: index.php?Obra/detalhe=' . $_POST['obraID'].'&success=Crítica registrada');
                 } catch (PDOException $erro) {
-                    echo 'Exceção Capturada: ', $erro;
+                    header('Location: index.php?Obra/detalhe=' . $_POST['obraID'].'&error=Erro ao registrar crítica');
                 }
             } else {
                 header('Location:index.php?mensagem=Você precisa estar logado para executar esta ação');
@@ -67,9 +66,15 @@ class CriticaController extends Controller
     public function excluir()
     {
 
+        try {
+
         Critica::excluir($_POST['criticaID']);
+        
 
-
-        header('Location: index.php?Obra/detalhe=' . $_POST['obraID']);
+        header('Location: index.php?Obra/detalhe=' . $_POST['obraID'].'&success=Crítica excluída');
+        }
+        catch(PDOException $erro) {
+            header('Location: index.php?Obra/detalhe=' . $_POST['obraID'].'&error=Erro ao excluir crítica');
+        }
     }
 }

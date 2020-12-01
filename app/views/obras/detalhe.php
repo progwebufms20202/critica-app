@@ -113,6 +113,7 @@
 
 
     <script type="text/javascript" src="publico/scripts/obra-detalhe.js"></script>
+    <?php require 'app/views/alert.php' ?>
     </body>
 
 </html>

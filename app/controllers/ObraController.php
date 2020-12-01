@@ -127,8 +127,7 @@ class ObraController extends Controller
     {
 
         try {
-            $url = $_SERVER['REQUEST_URI'];
-            print_r($url);
+            $url = $_SERVER['REQUEST_URI'];           
              $obra = Obra::buscarPorID($_POST['obraID']);
             Obra::excluir($_POST['obraID']);
 
