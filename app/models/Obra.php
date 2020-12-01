@@ -65,6 +65,24 @@ class Obra {
     */
     private $categoria;
 
+       /**
+    * @var int 
+    */
+    private $episodios;
+
+         /**
+    * @var int 
+    */
+    private $temporadas;
+
+
+         /**
+    * @var int 
+    */
+    private $paginas;
+
+
+
     /**
     *  
     */
@@ -77,7 +95,10 @@ class Obra {
     string $enredo, 
     string $imagem, 
     string $categoria,
-    string $emailUsuario )
+    string $emailUsuario,
+    int $episodios,
+    int $temporadas,
+    int $paginas )
     {
         $this->titulo = $titulo;
         $this->duracao = $duracao;
@@ -88,6 +109,9 @@ class Obra {
         $this->imagem = $imagem;
         $this->categoria = $categoria;
         $this->emailUsuario = $emailUsuario;
+        $this->episodios = $episodios;
+        $this->temporadas = $temporadas;
+        $this->paginas = $paginas;
     
     }
 
@@ -108,14 +132,15 @@ class Obra {
 
 
     public function salvar() {
+       
         
         $db = Banco::getInstance();
         $stmt = $db->prepare('INSERT INTO Obra (titulo, 
         duracao, genero,
         dataLancamento, classificacaoIndicativa, 
-        enredo, imagem, categoria, emailUsuario)
+        enredo, imagem, categoria, emailUsuario, episodios, temporadas, paginas)
          VALUES (:titulo, :duracao, :genero, :dataLancamento, :classificacaoIndicativa,
-        :enredo, :imagem, :categoria, :emailUsuario)');
+        :enredo, :imagem, :categoria, :emailUsuario, :episodios, :temporadas, :paginas)');
     
        
         $stmt->bindValue(':titulo', $this->titulo);
@@ -127,13 +152,17 @@ class Obra {
         $stmt->bindValue(':imagem', $this->imagem);
         $stmt->bindValue(':categoria', $this->categoria);
         $stmt->bindValue(':emailUsuario', $this->emailUsuario);
+        $stmt->bindValue(':episodios', $this->episodios);
+        $stmt->bindValue(':temporadas', $this->temporadas);
+        $stmt->bindValue(':paginas', $this->paginas);
+
+    
        
         $stmt->execute();
        
     }
 
     /**
-  
      * @return Obra 
      */    
     public static function buscarTodos() {
@@ -156,7 +185,10 @@ class Obra {
                 $item['enredo'],
                 $item['imagem'],
                 $item['categoria'],
-                $item['emailUsuario']);
+                $item['emailUsuario'],
+                $item['episodios'],
+                $item['temporadas'],
+                $item['paginas']);
                 
                 $obras[$i]->__set("obraID", $item['obraID']);
                 $i++;
@@ -188,7 +220,10 @@ class Obra {
                 $resultado['enredo'],
                 $resultado['imagem'],
                 $resultado['categoria'],
-                $resultado['emailUsuario']);             
+                $resultado['emailUsuario'],
+                $resultado['episodios'],
+                $resultado['temporadas'],
+                $resultado['paginas']);             
                              
             $obra->__set("obraID",$resultado['obraID']);
             return $obra;            
@@ -218,7 +253,10 @@ class Obra {
                 $item['enredo'],
                 $item['imagem'],
                 $item['categoria'],
-                $item['emailUsuario']);  
+                $item['emailUsuario'],
+                $item['episodios'],
+                $item['temporadas'],
+                $item['paginas']);  
                                 
                 $obras[$i]->__set("obraID", $item['obraID']);
                 
@@ -235,16 +273,20 @@ class Obra {
     }
 
     public static function buscarUltimosLancamentos() {
+
+       
         $db = Banco::getInstance();
         
         $stmt = $db->prepare('SELECT * FROM obra ORDER BY obraID desc LIMIT 6');               
         $stmt->execute();
 
         $resultado = $stmt->fetchAll();           
-        
+       
         if ($resultado) {   
              $i = 0;         
             foreach($resultado as $item) {
+
+                
                 $obras[$i] = new Obra($item['titulo'],
                 $item['duracao'], $item['genero'],
                 $item['dataLancamento'],
@@ -252,7 +294,12 @@ class Obra {
                 $item['enredo'],
                 $item['imagem'],
                 $item['categoria'],
-                $item['emailUsuario']);   
+                $item['emailUsuario'],
+                $item['episodios'],
+                $item['temporadas'],
+                $item['paginas']);
+
+                
 
                 $obras[$i]->__set("obraID", $item['obraID']);
                 $i++;
@@ -285,7 +332,11 @@ class Obra {
                 $item['enredo'],
                 $item['imagem'],
                 $item['categoria'],
-                $item['emailUsuario']);  
+                $item['emailUsuario'],
+                $item['episodios'],
+                $item['temporadas'],
+                $item['paginas']);
+
                 $obras[$i]->__set("obraID", $item['obraID']);
                 $i++;
             }                 

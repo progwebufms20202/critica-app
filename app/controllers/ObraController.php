@@ -40,18 +40,21 @@ class ObraController extends Controller
             if (isset($_SESSION['user'])) {
            
            
-                $dt = DateTime::createFromFormat('d/m/Y',$_POST['dataLancamento'])->format('d M Y'); 
-                
+                $dt = DateTime::createFromFormat('d/m/Y',$_POST['dataLancamento'])->format('d M Y');                 
                 $obra = new Obra(
-                    $_POST['titulo'],
-                    $_POST['duracao'],
+                    
+                    $_POST['titulo'],                    
+                    isset($_POST['duracao']) && $_POST['duracao'] != "" ? (int)$_POST['duracao'] : 0,
                     $_POST['genero'],                                
                     $dt,
                     $_POST['classificacaoIndicativa'],
                     $_POST['enredo'],
                     $imagemname,
                     $_POST['categoria'],
-                    $_SESSION['user']->email
+                    $_SESSION['user']->email,
+                    isset($_POST['episodios']) && $_POST['episodios'] != "" ?(int)$_POST['episodios'] : 0,
+                    isset($_POST['temporadas']) && $_POST['temporadas'] != ""?(int)$_POST['temporadas'] : 0,
+                    isset($_POST['paginas'])&& $_POST['paginas'] != ""?(int)$_POST['paginas'] : 0,
                 );
 
              

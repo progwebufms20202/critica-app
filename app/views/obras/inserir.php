@@ -27,12 +27,12 @@
           </section>
 
           <div class="insert">
-            <input id="titulo" name="titulo" type="text" placeholder="Titulo"  required for="titulo"  autocomplete="off"/>
+            <input id="titulo" name="titulo" type="text" placeholder="Titulo" required for="titulo" autocomplete="off" />
 
           </div>
 
           <div class="insert">
-            <select id="categoria" name="categoria">
+            <select id="categoria" name="categoria" onchange="hiddenInput(value)">
               <option class=".option" value="Filme" selected>Filme</option>
               <option class=".option" value="Serie">Série</option>
               <option class=".option" value="Livro">Livro</option>
@@ -40,46 +40,45 @@
           </div>
 
           <div class="insert">
-            <input id="duracao" name="duracao" type="text" placeholder="Duração (minutos)" for="duracao" required pattern="[0-9]+$" autocomplete="off"/>
+            <input id="duracao" name="duracao" type="text" placeholder="Duração (minutos)" for="duracao" required pattern="[0-9]+$" autocomplete="off" />
           </div>
 
           <div class="insert">
-            <input id="genero" name="genero" type="text" placeholder="Gênero" required  autocomplete="off"/>
+            <input style="display: none;" id="episodios" name="episodios" type="text" placeholder="Número de episodios" for="episodios"  pattern="[0-9]+$" autocomplete="off" />
           </div>
 
           <div class="insert">
-            <input id="dataLancamento" name="dataLancamento" type="text" placeholder="Data de Lançamento (__/__/__)" required pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2012-01-01" max="2014-02-18"  autocomplete="off"/>
+            <input style="display: none;" id="temporadas" name="temporadas" type="text" placeholder="Número de temporadas" for="temporadas"  pattern="[0-9]+$" autocomplete="off" />
+          </div>
+
+
+          <div class="insert">
+            <input style="display: none;" id="paginas" name="paginas" type="text" placeholder="Número de páginas" for="paginas"  pattern="[0-9]+$" autocomplete="off" />
           </div>
 
           <div class="insert">
-          <input id="classificacaoIndicativa" name="classificacaoIndicativa" type="text" placeholder="Classificação Indicativa (número)" required pattern="[0-9]+$" min="1" max="18"  autocomplete="off"/>
+            <input id="genero" name="genero" type="text" placeholder="Gênero" required autocomplete="off" />
           </div>
 
           <div class="insert">
-            <textarea id="enredo" name="enredo" placeholder="Enredo" required  autocomplete="off"></textarea>
+            <input id="dataLancamento" name="dataLancamento" type="text" placeholder="Data de Lançamento (__/__/__)"  pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2012-01-01" max="2014-02-18" autocomplete="off" />
           </div>
-          <input onsubmit="submit()" type="submit" class="botaocadastrar" value="Cadastrar" required  autocomplete="off"/>
+
+          <div class="insert">
+            <input id="classificacaoIndicativa" name="classificacaoIndicativa" type="text" placeholder="Classificação Indicativa (número)" required pattern="[0-9]+$" min="1" max="18" autocomplete="off" />
+          </div>
+
+          <div class="insert">
+            <textarea id="enredo" name="enredo" placeholder="Enredo" required autocomplete="off"></textarea>
+          </div>
+          <input onsubmit="submit()" type="submit" class="botaocadastrar" value="Cadastrar" required autocomplete="off" />
         </form>
       </section>
     </main>
 
 
 
-    <script>
-
-
-      function showPreview(event) {        
-        if (event.target.files.length > 0) {
-          var src = URL.createObjectURL(event.target.files[0]);
-          var preview = document.getElementById("file-ip-1-preview");
-          preview.src = src;
-          preview.style.display = "block";
-        }
-      }
-    </script>
+    <script type="text/javascript" src="publico/scripts/obra-inserir.js"></script>
     </body>
 
 </html>
-
-
-

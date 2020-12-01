@@ -667,7 +667,7 @@ ul.reviews li p {
 
 
 .card {
-  margin: 16px;
+  margin: 12px;
   background-color: #2b2a29;
   width: 230px;
   height: 200px;
@@ -677,6 +677,7 @@ ul.reviews li p {
   justify-content: space-between;
   flex-direction: column;
   position: initial;
+  font-size: 70%;
 }
 
 
@@ -798,6 +799,7 @@ a:hover {
   top: 50px;
   left: 240px;
   position: relative;
+  margin-left: 2px;
 }
 
 input:-internal-autofill-selected {

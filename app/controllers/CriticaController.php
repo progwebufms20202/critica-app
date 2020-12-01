@@ -19,7 +19,7 @@ class CriticaController extends Controller
     {
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            print_r((new DateTime())->format('d/m/Y'));
+          
             if (isset($_SESSION['user'])) {
                 $critica = new Critica(
                     $_POST['titulo'],
@@ -32,7 +32,7 @@ class CriticaController extends Controller
                     
                 );
                 try {
-                    print_r("teste");
+                
 
                     $critica->salvar();
 

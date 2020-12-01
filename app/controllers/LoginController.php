@@ -30,7 +30,7 @@ class LoginController extends Controller
 
             
             $usuario = Usuario::buscar($_POST['email']);
-            print_r('teste');
+       
             if (!is_null($usuario) && $usuario->igual($_POST['email'], $_POST['senha'])) {
                 $_SESSION['user'] = $this->loggedUser = $usuario;
             }

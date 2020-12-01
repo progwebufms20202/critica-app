@@ -38,35 +38,41 @@ final class Banco {
         $db->exec('
             CREATE TABLE IF NOT EXISTS Usuarios (
                 email TEXT PRIMARY KEY,
-                senha TEXT,
-                nome TEXT
+                senha TEXT NOT NULL,
+                nome TEXT NOT NULL
             )
         ');
         $db->exec('
             CREATE TABLE IF NOT EXISTS Obra (
                 obraID INTEGER  PRIMARY KEY AUTOINCREMENT,
-                titulo TEXT,
+                titulo TEXT NOT NULL,
                 duracao INTEGER,
-                genero TEXT,
+                genero TEXT NOT NULL,
                 dataLancamento TEXT,
                 classificacaoIndicativa INTEGER,
-                enredo TEXT,
+                enredo TEXT NOT NULL,
                 emailUsuario TEXT,
                 imagem BLOB,
-                categoria TEXT
+                categoria TEXT,
+                episodios INTEGER,
+                temporadas INTEGER,
+                paginas INTEGER,
+                FOREIGN KEY(emailUsuario) REFERENCES Usuarios(email)
             )        
         ');
 
         $db->exec('                         
             CREATE TABLE IF NOT EXISTS Critica (
                 criticaID INTEGER  PRIMARY KEY AUTOINCREMENT,
-                titulo TEXT,
-                comentario TEXT,                                       
-                nota FLOAT,
-                data TEXT,   
+                titulo TEXT NOT NULL,
+                comentario TEXT NOT NULL,                                       
+                nota FLOAT NOT NULL,
+                data TEXT NOT NULL,   
                 nomeUsuario TEXT,             
                 emailUsuario TEXT,
-                obraID INTEGER                
+                obraID INTEGER,
+                FOREIGN KEY(emailUsuario) REFERENCES Usuarios(email),
+                FOREIGN KEY(obraID) REFERENCES Obra(obraID)
             )        
         ');
         

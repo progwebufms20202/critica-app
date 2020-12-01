@@ -18,8 +18,27 @@
             <div class="body-m piece-info">
               <span>+ <?= $data[0]->classificacaoIndicativa ?></span>
               <div class="separator"></div>
-              <span><?= $data[0]->duracao ?> min</span>
-              <div class="separator"></div>
+
+              <?php if  ($data[0]->duracao != 0) { ?>                 
+                <span><?= $data[0]->duracao ?> min</span>
+                <div class="separator"></div>
+             <?php } ?>
+             
+             <?php if  ($data[0]->episodios != 0) { ?>                 
+                <span><?= $data[0]->episodios ?> episódio(s)</span>
+                <div class="separator"></div>
+             <?php } ?>
+             
+             <?php if  ($data[0]->temporadas != 0) { ?>                 
+                <span><?= $data[0]->temporadas ?> temporada(s)</span>
+                <div class="separator"></div>
+             <?php } ?>
+             
+             <?php if  ($data[0]->paginas != 0) { ?>                 
+                <span><?= $data[0]->paginas ?> página(s)</span>
+                <div class="separator"></div>
+             <?php } ?>
+             
               <span><?= $data[0]->genero ?></span>
               <div class="separator"></div>
               <span><?= $data[0]->dataLancamento ?></span>
