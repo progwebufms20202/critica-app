@@ -67,3 +67,4 @@
  <div class="modal-backdrop fade show" id="backdrop" style="display: none;"></div>
  <script type="text/javascript" src="publico/scripts/cards-critica.js"></script>
  <script type="text/javascript" src="publico/scripts/cards-obra.js"></script>
+ <?php require 'app/views/alert.php' ?>
